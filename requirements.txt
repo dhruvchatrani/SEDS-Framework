@@ -1,0 +1,9 @@
+langgraph
+langchain
+neo4j
+chromadb
+pydantic
+python-dotenv
+psycopg2-binary
+langchain-google-genai
+mcp

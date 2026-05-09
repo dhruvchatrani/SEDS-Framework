@@ -1,4 +1,4 @@
-# Product Requirements Document: Synthetic Enterprise Decision-Support (SEDS) Framework
+# Product Requirements Document: Multi-Agent Enterprise Simulation (MAES) Framework
 
 ## 1. Executive Summary
 
@@ -16,7 +16,7 @@
 The framework utilizes autonomous agents representing specialized enterprise functions. Each agent operates on a unique utility function (KPIs) to simulate real-world departmental friction.
 
 ### Strategic Alignment Protocol
-Instead of linear orchestration, SEDS uses a **Consensus-Driven Graph Architecture**. Proposals are iteratively refined through parallel validation nodes (Fiscal and Risk) until executive adjudication determines sufficient alignment.
+Instead of linear orchestration, MAES uses a **Consensus-Driven Graph Architecture**. Proposals are iteratively refined through parallel validation nodes (Fiscal and Risk) until executive adjudication determines sufficient alignment.
 
 ### Multi-Dimensional Evaluation (MDEF)
 Post-simulation performance is scored across:

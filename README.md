@@ -1,4 +1,4 @@
-# Synthetic Enterprise Decision-Support (SEDS) Framework
+# Multi-Agent Enterprise Simulation (MAES) Framework
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-orange.svg)](https://github.com/langchain-ai/langgraph)
@@ -6,7 +6,7 @@
 
 ## 🚀 Overview
 
-The **Synthetic Enterprise Decision-Support (SEDS)** framework is an industrial-grade agentic simulation environment designed to model complex organizational decision-making under stress. Unlike linear simulations, SEDS utilizes a **Multi-Persona Alignment Protocol** where autonomous executive agents (CEO, CFO, COO, CRO) must navigate conflicting departmental KPIs and exogenous market shocks to reach a strategic consensus.
+**Multi-Agent Enterprise Simulation (MAES)** is an industrial-grade agentic simulation environment designed to model complex organizational decision-making under stress. Unlike linear simulations, MAES utilizes a **Multi-Persona Alignment Protocol** where autonomous executive agents (CEO, CFO, COO, CRO) must navigate conflicting departmental KPIs and exogenous market shocks to reach a strategic consensus.
 
 This project demonstrates state-of-the-art agent orchestration, structured telemetry, and multi-dimensional evaluation for AI-driven enterprise planning.
 
@@ -14,7 +14,7 @@ This project demonstrates state-of-the-art agent orchestration, structured telem
 
 ## 🏗️ System Architecture
 
-SEDS is built on a cyclic, consensus-driven graph architecture using **LangGraph**.
+MAES is built on a cyclic, consensus-driven graph architecture using **LangGraph**.
 
 ```mermaid
 graph TD
@@ -38,7 +38,7 @@ graph TD
 
 ## 📊 Core Metrics
 
-SEDS tracks enterprise health through a three-pillared metric system:
+MAES tracks enterprise health through a three-pillared metric system:
 1. **Fiscal Runway**: Real-time capital tracking and allocation constraints.
 2. **Operational Resilience**: A measure of the organization's capacity to absorb shocks without throughput loss.
 3. **Risk Exposure**: Probabilistic assessment of systemic failure modes.
@@ -54,7 +54,7 @@ SEDS tracks enterprise health through a three-pillared metric system:
 ### 2. Installation
 ```bash
 git clone <repo-url>
-cd SEDS-Framework
+cd maes-simulation
 make setup
 ```
 
@@ -65,9 +65,9 @@ make run
 
 ---
 
-## 💼 Why SEDS? (The Industrial Edge)
+## 💼 Why MAES? (The Industrial Edge)
 
-SEDS isn't just a chatbot; it's a **Decision-Support Tool**. It addresses the "Black Box" problem in multi-agent systems by providing:
+MAES isn't just a chatbot; it's a **Decision-Support Tool**. It addresses the "Black Box" problem in multi-agent systems by providing:
 - **Traceability**: Every strategic pivot is logged with its underlying reasoning.
 - **Constraint Adherence**: Agents are hard-coded to respect fiscal and regulatory boundaries.
 - **Reproducibility**: Simulation artifacts allow for "What-If" scenario comparison.

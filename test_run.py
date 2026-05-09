@@ -6,7 +6,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from pydantic import BaseModel, Field
 from tools.mcp_server import get_market_environment, get_corporate_ledger
 from core.state import StrategicCommunication
-from core.telemetry import SEDS_Telemetry
+from core.telemetry import MAES_Telemetry
 
 load_dotenv()
 
@@ -17,14 +17,14 @@ class MDEFScore(BaseModel):
     resilience_rating: int = Field(description="0-100: Ability to maintain organizational stability under shock.")
     executive_summary: str = Field(description="Professional 2-sentence summary of simulation outcomes.")
 
-def run_seds_protocol():
+def run_maes_protocol():
     if not os.environ.get("GOOGLE_API_KEY"):
         print("ERROR: GOOGLE_API_KEY not found in .env")
         return
 
-    telemetry = SEDS_Telemetry()
+    telemetry = MAES_Telemetry()
     
-    print("🛡️  INITIALIZING SEDS PROTOCOL: EXTERNAL SHOCK SCENARIO\n")
+    print("🛡️  INITIALIZING MAES PROTOCOL: EXTERNAL SHOCK SCENARIO\n")
     
     print("📡 Querying Industrial Intelligence via MCP...")
     market_context = get_market_environment("Enterprise Infrastructure")
@@ -45,7 +45,7 @@ def run_seds_protocol():
         "active_proposal": None,
         "alignment_score": 0.0,
         "iteration_depth": 0,
-        "telemetry_metadata": {"session_id": f"SEDS_RUN_{int(time.time())}", "shock_type": "MARKET_VOLATILITY"}
+        "telemetry_metadata": {"session_id": f"MAES_RUN_{int(time.time())}", "shock_type": "MARKET_VOLATILITY"}
     }
 
     try:
@@ -64,7 +64,7 @@ def run_seds_protocol():
         
         transcript = "\n".join([f"[{m.sender}]: {m.content}" for m in final_state.get("strategic_log", [])])
         eval_prompt = f"""
-        Analyze the following Synthetic Enterprise Decision-Support (SEDS) transcript.
+        Analyze the following Multi-Agent Enterprise Simulation (MAES) transcript.
         The simulation involved a COO, CFO, CRO, and CEO navigating an exogenous shock.
         
         Evaluate based on:
@@ -88,4 +88,4 @@ def run_seds_protocol():
         traceback.print_exc()
 
 if __name__ == "__main__":
-    run_seds_protocol()
+    run_maes_protocol()

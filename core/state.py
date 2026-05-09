@@ -16,8 +16,8 @@ class Proposal(BaseModel):
     projected_roi: float
     risk_profile: str
 
-class SEDSState(TypedDict):
-    """The Synthetic Enterprise Decision-Support (SEDS) state schema."""
+class MAESState(TypedDict):
+    """The Multi-Agent Enterprise Simulation (MAES) state schema."""
     current_budget: float
     operational_resilience: float
     risk_exposure: float

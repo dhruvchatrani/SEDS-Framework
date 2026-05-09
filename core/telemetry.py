@@ -2,19 +2,19 @@ import json
 import os
 from datetime import datetime
 from typing import Any, Dict, List
-from core.state import SEDSState
+from core.state import MAESState
 
-class SEDS_Telemetry:
+class MAES_Telemetry:
     """
     Handles structured data persistence and metric extraction for 
-    Synthetic Enterprise Decision-Support (SEDS) runs.
+    Multi-Agent Enterprise Simulation (MAES) runs.
     """
     
     def __init__(self, log_dir: str = "artifacts/telemetry"):
         self.log_dir = log_dir
         os.makedirs(self.log_dir, exist_ok=True)
 
-    def log_session(self, final_state: SEDSState, execution_time: float) -> str:
+    def log_session(self, final_state: MAESState, execution_time: float) -> str:
         """
         Serializes the final state and metadata into a JSON artifact.
         Returns the path to the saved artifact.
@@ -52,7 +52,7 @@ class SEDS_Telemetry:
         return file_path
 
     @staticmethod
-    def extract_summary(final_state: SEDSState) -> str:
+    def extract_summary(final_state: MAESState) -> str:
         """Generates a professional executive summary of the run."""
         summary = "=== EXECUTIVE STRATEGIC SUMMARY ===\n"
         summary += f"Status: {'CONVERGED' if final_state.get('alignment_score', 0) > 0.7 else 'DIVERGED'}\n"

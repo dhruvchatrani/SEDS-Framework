@@ -1,11 +1,11 @@
 from typing import Any, Dict, List
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.messages import HumanMessage
-from core.state import SEDSState
+from core.state import MAESState
 
 class SimulationAgent:
     """
-    Base class for SEDS agents. Manages strategic role execution, 
+    Base class for MAES agents. Manages strategic role execution, 
     contextual state analysis, and structured decision output.
     """
     def __init__(self, name: str, system_prompt: str, llm: Any):
@@ -19,7 +19,7 @@ class SimulationAgent:
         ])
         self.chain = self.prompt_template | self.llm
 
-    def run(self, state: SEDSState, structured_output_type: Any = None):
+    def run(self, state: MAESState, structured_output_type: Any = None):
         """Invoke the agent chain with strategic context handling."""
         context = self.format_state_context(state)
         messages = state.get("strategic_log", [])
@@ -38,7 +38,7 @@ class SimulationAgent:
             
         return chain.invoke({"messages": formatted_messages, "state_context": context})
 
-    def format_state_context(self, state: SEDSState) -> str:
+    def format_state_context(self, state: MAESState) -> str:
         """Serializes current enterprise metrics for LLM ingestion."""
         budget = state.get("current_budget", 0.0)
         resilience = state.get("operational_resilience", 0.0)

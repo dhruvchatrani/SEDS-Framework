@@ -1,0 +1,28 @@
+[project]
+name = "seds-framework"
+version = "0.1.0"
+description = "Synthetic Enterprise Decision-Support (SEDS) Framework"
+readme = "maes-simulation/README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "SEDS Development Team"}
+]
+dependencies = [
+    "langgraph",
+    "langchain",
+    "neo4j",
+    "chromadb",
+    "pydantic",
+    "python-dotenv",
+    "psycopg2-binary",
+    "langchain-google-genai",
+    "mcp"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["maes-simulation"]

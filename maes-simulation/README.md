@@ -54,13 +54,13 @@ SEDS tracks enterprise health through a three-pillared metric system:
 ### 2. Installation
 ```bash
 git clone <repo-url>
-cd maes-simulation
-pip install -r requirements.txt
+cd NM
+make setup
 ```
 
 ### 3. Run a Simulation
 ```bash
-python test_run.py
+make run
 ```
 
 ---

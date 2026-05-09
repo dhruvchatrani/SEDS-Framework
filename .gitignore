@@ -155,3 +155,7 @@ cython_debug/
 maes-simulation/artifacts/telemetry/
 artifacts/telemetry/
 sample_output.md
+
+# System/AI Specifics
+.gemini/
+skills-lock.json

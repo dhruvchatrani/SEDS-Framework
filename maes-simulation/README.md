@@ -54,7 +54,7 @@ SEDS tracks enterprise health through a three-pillared metric system:
 ### 2. Installation
 ```bash
 git clone <repo-url>
-cd NM
+cd SEDS-Framework
 make setup
 ```
 
